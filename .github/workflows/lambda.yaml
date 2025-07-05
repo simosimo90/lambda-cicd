@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Dependencies # Install my packages
         run: |
-            python -m pip install -upgrade pip
+            python -m pip install --upgrade pip
             pip install -r lambda/requirements.txt -t lambda/
 
 
@@ -36,7 +36,7 @@ jobs:
         run: |
             cd lambda/
             zip -r lambda.zip .
-            aws labda update-function-code --function-name my_test_cicd_lambda --zip-file file://lambda.zip
+            aws lambda update-function-code --function-name my_test_cicd_lambda --zip-file file://lambda.zip
 
               
 
