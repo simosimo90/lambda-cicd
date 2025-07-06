@@ -20,7 +20,7 @@ Resources:
         - Key: Environnment
           Value: !Ref Environnment
         - Key: Environnment
-          Value: GiyHubActions Testing  
+          Value: GiyHubActions
       
       
 Outputs:
