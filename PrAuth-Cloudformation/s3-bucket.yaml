@@ -20,7 +20,8 @@ Resources:
         - Key: Environnment
           Value: !Ref Environnment
         - Key: Environnment
-          Value: GiyHubActions
+          Value: Workflow
+      #the last tags is needed just for trigger
       
       
 Outputs:
