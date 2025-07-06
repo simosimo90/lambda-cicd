@@ -61,8 +61,5 @@ jobs:
       - name: Delete Test Stack
         run: | # <--- Corrected indentation (content of 'run' block should be 2 spaces from 'run:')
           stack-name="pr-test-stack-${{github.event.pull_request.number}}"
-          aws cloudformation delete-stack --stack-name $stack-name
-								
-
-
+          aws cloudformation delete-stack --stack-name $stack-name							
 
