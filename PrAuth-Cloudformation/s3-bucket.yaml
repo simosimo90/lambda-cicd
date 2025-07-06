@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 Bucket for our CICD PR'
 
 Parameters:
-  Environnment:
+  Environment:
     Type: String 
     Default: Test 
     AllowedValues: 
@@ -17,11 +17,10 @@ Resources:
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environnment}-bucket'
       Tags:
-        - Key: Environnment
-          Value: !Ref Environnment
-        - Key: Environnment
-          Value: Workflow
-      #the last tags is needed just for trigger
+        - Key: Environment
+          Value: !Ref Environment
+        
+      #changing some stuffs again for trigger
       
       
 Outputs:
