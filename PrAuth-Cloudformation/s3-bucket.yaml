@@ -4,7 +4,7 @@ Description: 'S3 Bucket for our CICD PR'
 Parameters:
   Environment:
     Type: String 
-    Default: Test 
+    Default: test 
     AllowedValues: 
       - test 
       - staging 
@@ -15,7 +15,7 @@ Resources:
   TheS3Bucket: 
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environnment}-bucket'
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
       Tags:
         - Key: Environment
           Value: !Ref Environment
