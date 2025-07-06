@@ -19,6 +19,8 @@ Resources:
       Tags:
         - Key: Environnment
           Value: !Ref Environnment
+        - Key: Environnment
+          Value: GiyHubActions Testing  
       
       
 Outputs:
