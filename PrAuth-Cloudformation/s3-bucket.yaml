@@ -20,7 +20,7 @@ Resources:
         - Key: Environment
           Value: !Ref Environment
         
-      #again changing some stuffs again for trigger
+      #changing this comment for trrigger after S3 creation failed
       
       
 Outputs:
