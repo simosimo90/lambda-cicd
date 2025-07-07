@@ -2,9 +2,9 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 Bucket for our CICD PR'
 
 Parameters:
-  Environnment:
+  Environment:
     Type: String 
-    Default: Test 
+    Default: test 
     AllowedValues: 
       - test 
       - staging 
@@ -15,10 +15,12 @@ Resources:
   TheS3Bucket: 
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environnment}-bucket'
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
       Tags:
-        - Key: Environnment
-          Value: !Ref Environnment
+        - Key: Environment
+          Value: !Ref Environment
+        
+      #changing again and again for have the s3 stack works
       
       
 Outputs:
